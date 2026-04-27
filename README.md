@@ -35,7 +35,7 @@ With Local Storage user attempts and best accuracy is saved acrossed sessions.
 ## DLC — Additional Topics
 
 ### JSON & Local Storage
-The full tournament object — contestant names, match results, current round — is serialized with `JSON.stringify()` and saved to `localStorage` after every state change. On load, `JSON.parse()` restores the bracket exactly where the user left off. This means no data is lost between sessions without any backend.
+WPM and accuracy will be saved across sessions for localStorage. The user can return back to the web application and see their best accuracy and typing speed. 
 
 
 ---
