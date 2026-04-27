@@ -1,6 +1,6 @@
 # Custom Tournament Bracket Builder
 **WEB-115 Final Project Proposal**
-Student: [Your Name] | Repo: `WEB-115_FinalProject_[LastName]`
+Student: [Treyvon Pearson ] | Repo: `WEB-115_FinalProject_[Pearson]`
 
 ---
 
