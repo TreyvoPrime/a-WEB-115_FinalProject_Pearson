@@ -21,6 +21,8 @@ function WordSplitter() {
 
 }
 const text = RandomSentence(SentenceBank)
+const splitted_text = text.split("")
+
 typing_test = document.getElementById("typing_text")
 typing_test.textContent = text
 typingBox.addEventListener("input", () => {
@@ -29,10 +31,35 @@ typingBox.addEventListener("input", () => {
 
     for (let i = 0; i < currentValue.length; i++) {
         console.log(`Char ${i}: ${currentValue[i]}`)
-        singular_letter =  `${currentValue[i]}`
+        let singular_letter = `${currentValue[i]}`;
         console.log("my singular letter is", singular_letter)
-        for  (let i = 0; i < currentValue.length; i++) {
+        if (currentValue[i] !== splitted_text[i]) {
+            console.log("That is the incorrect letter")
+            let WPM = (splitted_text.length - 1)
+            console.log([i])
+        } else {
+            console.log("That is the correct letter")
+            console.log([i])
 
         }
     }
 })
+//timer function section
+let timeLeft = 30;
+let timerId = null
+function myTimer() {
+    document.getElementById("wpm-display").textContent = timeLeft;
+    timeLeft--;
+    console.log("Input detected")
+    if (timeLeft < 0) {
+      clearInterval(timerId);
+      document.getElementById("wpm-display").textContent = "Typing test over";
+    }
+  }
+  myTimer, { once: true }
+  typingBox.addEventListener("input", function () {
+    if (timerId === null) { 
+        timerId = setInterval(myTimer, 1000);
+        console.log("Timer started");
+    }
+}, { once: true });
