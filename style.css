@@ -24,3 +24,26 @@
     align-items: center;
     font-size: large;
 }
+#typing_complete_title {
+    font-size: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.typing_stats {
+    padding: 20px;
+    font-size: 18px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wpm-display {
+    padding: 20px;
+    font-size: 18px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

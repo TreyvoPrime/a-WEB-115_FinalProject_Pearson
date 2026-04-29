@@ -1,6 +1,6 @@
-typingBox = document.getElementById("typingBox")
+const typingBox = document.getElementById("typingBox")
 button = document.getElementById("testing")
-
+const WPM_stat = document.getElementById("WPM_stat")
 let SentenceBank = [
     { text: "Hello, I am Gurt and I am super cool. Being a Gurt is so awesome and I would not want to change it for the world. I love being a gurt, gurt, gurt. SYBAU GURT", 
      },
@@ -14,12 +14,7 @@ function RandomSentence() {
     return SentenceBank[randomIndex].text;
 
 }
-function WordSplitter() {
-    text = RandomSentence(SentenceBank)
-    const splitted_text = text.split("")
-    console.log(splitted_text)
-
-}
+//split the randomized selected word. 
 const text = RandomSentence(SentenceBank)
 const splitted_text = text.split("")
 
@@ -36,30 +31,41 @@ typingBox.addEventListener("input", () => {
         if (currentValue[i] !== splitted_text[i]) {
             console.log("That is the incorrect letter")
             let WPM = (splitted_text.length - 1)
+            console.log(currentValue.length)
+            console.log(splitted_text.length)
             console.log([i])
         } else {
             console.log("That is the correct letter")
             console.log([i])
+        }
+        if (currentValue.length >= splitted_text.length) {
+            window.location.href = "completion.html"
 
+            console.log("Word Complete")
         }
     }
 })
-//timer function section
 let timeLeft = 30;
 let timerId = null
+
+//timer section
 function myTimer() {
-    document.getElementById("wpm-display").textContent = timeLeft;
     timeLeft--;
-    console.log("Input detected")
+    document.getElementById("wpm-display").textContent = timeLeft;
+    console.log("Input detected");
+
     if (timeLeft < 0) {
-      clearInterval(timerId);
-      document.getElementById("wpm-display").textContent = "Typing test over";
+        clearInterval(timerId);
+        document.getElementById("wpm-display").textContent = "Typing test over";
     }
-  }
-  myTimer, { once: true }
-  typingBox.addEventListener("input", function () {
-    if (timerId === null) { 
+}
+
+typingBox.addEventListener("input", function () {
+    if (timerId === null) {
         timerId = setInterval(myTimer, 1000);
         console.log("Timer started");
     }
-}, { once: true });
+}, { once: true }); 
+function display_results() {
+    WPM_stat.textContent = gurt
+}
