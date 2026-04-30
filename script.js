@@ -20,34 +20,43 @@ const splitted_text = text.split("")
 
 typing_test = document.getElementById("typing_text")
 typing_test.textContent = text
+//detect text input and arrange all processes to get ot the final outputs.
 typingBox.addEventListener("input", () => {
-
+    function userTimed() {
+        timeUser++;
+        console.log("user being timed");
+        console.log(timeUser)
+    }
+    timerId = setInterval(userTimed, 1000);
     const currentValue = typingBox.value; 
-
+    userTimed()
     for (let i = 0; i < currentValue.length; i++) {
         console.log(`Char ${i}: ${currentValue[i]}`)
         let singular_letter = `${currentValue[i]}`;
         console.log("my singular letter is", singular_letter)
         if (currentValue[i] !== splitted_text[i]) {
             console.log("That is the incorrect letter")
-            let WPM = (splitted_text.length - 1)
             console.log(currentValue.length)
             console.log(splitted_text.length)
             console.log([i])
-        } else {
+            let WPM = (splitted_text.length / 1)
+
+    
+        } else{
             console.log("That is the correct letter")
             console.log([i])
         }
-        if (currentValue.length >= splitted_text.length) {
-            window.location.href = "completion.html"
+        if (currentValue[i] == splitted_text[i])  {
 
-            console.log("Word Complete")
         }
+      
+            
+        
     }
 })
 let timeLeft = 30;
 let timerId = null
-
+let timeUser = 0
 //timer section
 function myTimer() {
     timeLeft--;
@@ -57,8 +66,13 @@ function myTimer() {
     if (timeLeft < 0) {
         clearInterval(timerId);
         document.getElementById("wpm-display").textContent = "Typing test over";
+        window.location.href = "completion.html"
+  
+
     }
+
 }
+
 
 typingBox.addEventListener("input", function () {
     if (timerId === null) {
@@ -67,5 +81,5 @@ typingBox.addEventListener("input", function () {
     }
 }, { once: true }); 
 function display_results() {
-    WPM_stat.textContent = gurt
+    WPM_stat.textContent = "gurt"
 }
