@@ -83,3 +83,7 @@ typingBox.addEventListener("input", function () {
 function display_results() {
     WPM_stat.textContent = "gurt"
 }
+console.log("Hello")
+if (60 > 40) {
+    console.log("You should not pass")
+}
