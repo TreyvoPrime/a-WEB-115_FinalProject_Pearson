@@ -28,7 +28,7 @@ With Local Storage user attempts and best accuracy is saved acrossed sessions.
 | **If Statements & Loops** | loop through user inputted text and compare it to the sentence text to see if the text aligns correctly either marking incorrect or correct. If statements used to detect if a letter aligns with the letter of the sentence needing to be typed.|
 | **Event Listeners** | input eventListener to take inputs of text from textarea and process it to detect it's alignment to the sentance origianlly generated to be typed.  |
 | **DOM Element Creation** |The text that needs to be typed will be randomly grabbed from the array of sentences. It will be displayed in a header element and text that is typed in the textarea below it will update each letter of how the header looks depending if it's correct or incorrect. |
-| **Classes & Subclasses** | A class for setting a timer. A subclass of the timerclass for changing the time being scaled into minutes instead of seconds. |
+| **Classes & Subclasses** | A class for creating the results elements.  A subclass for displaying LocalStorage previous accuracy and WPM. |
 
 ---
 
