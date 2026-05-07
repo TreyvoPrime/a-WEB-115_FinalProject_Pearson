@@ -35,7 +35,7 @@ With Local Storage user attempts and best accuracy is saved acrossed sessions.
 ## DLC — Additional Topics
 
 ### JSON & Local Storage
-WPM and accuracy will be saved across sessions for localStorage. The user can return back to the web application and see their best accuracy and typing speed. 
+WPM and accuracy will be saved across sessions for localStorage. The user can return back to the web application and see their previous accuracy and typing speed.
 
 
 ---
