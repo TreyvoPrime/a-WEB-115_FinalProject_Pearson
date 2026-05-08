@@ -17,7 +17,7 @@ With Local Storage user attempts and best accuracy is saved acrossed sessions.
 - WPM results
 - accuracy and WPM saving across sesssions
 - highest WPM and Accuracy displayed
-- specific letters that are either correct or incorrect will have a visual display on if it's correct or not.
+- specific letters that are either correct or incorrect will have be noted as accurate or inaccurate. 
 
 ---
 
