@@ -1,7 +1,7 @@
 # TeloType typing speed test
 **WEB-115 Final Project Proposal**
 Student: [Treyvon Pearson ] | Repo: `WEB-115_FinalProject_[Pearson]`
-
+Live Site - https://treyvoprime.github.io/a-WEB-115_FinalProject_Pearson/
 ---
 
 ## Overview
