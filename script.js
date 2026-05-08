@@ -94,32 +94,23 @@ typingBox.addEventListener("input", () => {
         console.log("WPM:", WPM);
         console.log("Accuracy", accuracy)
 
-        const stats = new TypingResults(WPM, accuracy.toFixed(1));
-        stats.display(ParentDiv);
+    let previousWPM = localStorage.getItem("WPM");
+    let previousAccuracy = localStorage.getItem("Accuracy");
 
-        let previousWPM = localStorage.getItem("WPM");
-        let previousAccuracy = localStorage.getItem("Accuracy");
-        
-        // display previous WPM 
-        if (previousWPM !== null) {
-        
-            const stats = new ExtendedResults(WPM, accuracy.toFixed(1), previousWPM);
+// Create ONE ExtendedResults object
+    const stats = new ExtendedResults(
+        WPM,
+        accuracy.toFixed(1),
+        previousWPM,
+        previousAccuracy
+    );
 
-        }
-        
-        // display previous accuracy 
-        if (previousAccuracy !== null) {
-        
-            const stats = new ExtendedResults(WPM, accuracy.toFixed(1), previousAccuracy);
-
-        }
-        
-        // NOW save the new stats
-        localStorage.setItem("WPM", WPM);
-        localStorage.setItem("Accuracy", accuracy.toFixed(1));
-        
-
+    // display everything
     stats.displayDetailed(ParentDiv);
+
+// save new stats
+localStorage.setItem("WPM", WPM);
+localStorage.setItem("Accuracy", accuracy.toFixed(1));
     }
 })
 class TypingResults {
