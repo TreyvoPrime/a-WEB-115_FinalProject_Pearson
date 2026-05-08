@@ -97,13 +97,7 @@ typingBox.addEventListener("input", () => {
     let previousWPM = localStorage.getItem("WPM");
     let previousAccuracy = localStorage.getItem("Accuracy");
 
-// Create ONE ExtendedResults object
-    const stats = new ExtendedResults(
-        WPM,
-        accuracy.toFixed(1),
-        previousWPM,
-        previousAccuracy
-    );
+    const stats = new ExtendedResults(WPM,accuracy.toFixed(1), previousWPM, previousAccuracy);
 
     // display everything
     stats.displayDetailed(ParentDiv);
