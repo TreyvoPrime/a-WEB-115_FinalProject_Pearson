@@ -47,18 +47,10 @@
     justify-content: center;
     align-items: center;
 }
-#wpm {
+#test_begin {
     padding: 20px;
     font-size: 18px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#prev_wpm {
-    padding: 20px;
-    font-size: 18px;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
